@@ -1,8 +1,2 @@
-[phases.setup]
-nixPkgs = ["php83", "php83Packages.composer"]
-
-[phases.install]
-cmds = ["composer install --no-dev --optimize-autoloader"]
-
 [start]
-cmd = "php index.php"
+cmd = "echo \"$OCI_PRIVATE_KEY_CONTENT\" > /app/key.pem && php index.php"
